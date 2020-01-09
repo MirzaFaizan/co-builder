@@ -1,3 +1,14 @@
+:root {
+  --color-bg-blue: #4B86DD;
+  --color-bg-grey:#BBBBBB;  
+}
+.text-blue{
+  color:var(--color-bg-blue) !important;
+}
+.text-grey{
+  color:var(--color-bg-grey) !important;
+}
+
 .App {
   text-align: center;
 }
@@ -27,7 +38,11 @@
 .App-link {
   color: #61dafb;
 }
-
+.notification{
+  position: absolute;
+  left: 20px;
+  bottom: 12px;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +50,83 @@
   to {
     transform: rotate(360deg);
   }
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 25px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 21px;
+  width: 21px;
+  left: 3px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(22px);
+  -ms-transform: translateX(22px);
+  transform: translateX(22px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.h-fit-content{
+  height: fit-content !important;
+}
+.h-35{
+  min-height: 35vh;
+}
+.divider-vertical{
+  height: 10px;
+  border: 1px solid var(--color-bg-grey) ;
+}
+.font-16{
+  font-size: 16px !important;
+  font-weight: 600;
+}
+.font-30{
+  font-size: calc(15px + 2vmin);
 }

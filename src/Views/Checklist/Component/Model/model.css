@@ -1,0 +1,77 @@
+.modal.left .model-dialog-custom,
+	.modal.right .model-dialog-custom {
+		position: fixed;
+		margin: auto;
+		width: 45%;
+		height: 100%;
+		        transform: translate3d(0%, 0, 0) !important;
+	}
+
+	.modal.left .modal-content,
+	.modal.right .modal-content {
+		height: 100%;
+		overflow-y: auto;
+	}
+	
+	.modal.left .modal-body,
+	.modal.right .modal-body {
+		padding: 15px 15px 0px;
+	}
+
+/*Left*/
+	.modal.left.fade .model-dialog-custom{
+		left: -320px;
+		-webkit-transition: opacity 0.5s linear, left 0.5s ease-out;
+		   -moz-transition: opacity 0.5s linear, left 0.5s ease-out;
+		     -o-transition: opacity 0.5s linear, left 0.5s ease-out;
+		        transition: opacity 0.5s linear, left 0.5s ease-out;
+	}
+	
+	.modal.left.fade.in .model-dialog-custom{
+		left: 0;
+	}
+        
+/*Right*/
+	.modal.right.fade .model-dialog-custom {
+		right: -45%;
+		-webkit-transition: opacity 0.3s linear, right 0.5s ease-out;
+		   -moz-transition: opacity 0.3s linear, right 0.5s ease-out;
+		     -o-transition: opacity 0.3s linear, right 0.5s ease-out;
+		        transition: opacity 0.3s linear, right 0.5s ease-out;
+	}
+	
+	.modal.right.fade.in .model-dialog-custom {
+		right: 0;
+	}
+
+/* ----- MODAL STYLE ----- */
+	.modal-content {
+		border-radius: 0;
+		border: none;
+	}
+
+	.modal-header {
+		border-bottom-color: #EEEEEE;
+		background-color: #FAFAFA;
+    }
+   .model-swipe .react-calendar{
+       width: 100% !important;
+   }
+   .dialog_open__check:hover .custom-btn{
+	   display: none !important;
+   }
+   .dialog_open__check .view_more{
+	display: none !important;
+}
+   .dialog_open__check:hover .view_more{
+	display: block !important;
+}
+
+@media only screen and (max-width:767px){
+	.modal.left .model-dialog-custom,
+	.modal.right .model-dialog-custom {
+width: 90% !important;
+}
+}
+/* ----- v CAN BE DELETED v ----- */
+
