@@ -29,7 +29,7 @@ const SideBarData = [
   {
     IconName: "fas fa-pencil-alt",
     Name: "Quotes",
-    routeName: "quotes"
+    routeName: "qoutes"
   },
   {
     IconName: "far fa-folder-open",

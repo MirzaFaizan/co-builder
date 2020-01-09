@@ -7,6 +7,8 @@ import Checklist from './Views/Checklist/Checklist';
 import Navbar from './Views/Navbar/Navbar';
 import SideBar from './Views/Sidebar/Sidebar';
 import Budgeter from './Views/Budgeter/Budgeter';
+import Qoutes from './Views/Qoutes/Qoutes';
+import SUbContractors from './Views/SubContractors/SubContractors';
 const customHistory = createBrowserHistory();
 
 const type = localStorage.getItem('loggedIn'); //update when user logs in;
@@ -19,6 +21,8 @@ function CustomRoutes(props) {
       <Route exact path="/dashboard" component={Dashboard} />   
   <Route exact path="/checklist" component={Checklist} />
   <Route exact path="/budgeter" component={Budgeter} />
+  <Route exact path="/qoutes" component={Qoutes} />
+  <Route exact path="/sub-contractors" component={SUbContractors} />
   </>
     )
   }

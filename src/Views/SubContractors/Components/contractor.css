@@ -1,0 +1,46 @@
+/* .sub-contractors-section {
+  height: 90vh;
+} */
+
+.sub-contractors-section__form-check-sign::before, .sub-contractors-section__form-check-sign::after {
+  top: unset !important;
+  bottom: 0 !important;
+}
+
+.sub-contractors-section__table th {
+  font-size: 1rem;
+}
+
+.sub-contractors-section__table {
+  min-width: 900px !important;
+}
+
+/* ====Scroll-Bar==== */
+
+.sub-contractors-section .table-responsive::-webkit-scrollbar {
+  height: 4px !important;
+}
+
+.sub-contractors-section .table-responsive::-webkit-scrollbar-track {
+  background: var(--color-white);
+}
+
+.sub-contractors-section .table-responsive::-webkit-scrollbar-thumb {
+  background: var(--Carrot-Orange);
+}
+
+.position-absolute-dropdown {
+  position: absolute;
+  transform: translate3d(771px, 317px, 0px);
+  top: 0px;
+  left: 0px;
+  will-change: transform;
+}
+
+/* // Extra small devices (portrait phones, less than 375px) */
+
+@media (max-width: 415px) {
+  .sub-contractors-section {
+    height: 85vh;
+  }
+}
