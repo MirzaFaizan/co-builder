@@ -1,4 +1,5 @@
 import React from 'react';
+import DocumentTable from './DocumentTable';
 export default function Documents(){
     return(
         <div className="col-sm-12 bg-white p-2">
@@ -20,8 +21,8 @@ export default function Documents(){
               </div>
             </div>
           </div>
-          <div className="col-sm-12 m-3">
-            {/* <QoutesTable /> */}
+          <div className="col-sm-12 m-3 d-flex">
+          <DocumentTable />
           </div>
         </div>
       </div>
