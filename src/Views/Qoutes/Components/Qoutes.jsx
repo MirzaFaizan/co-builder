@@ -26,7 +26,7 @@ export default function QoutesView() {
             </div>
           </div>
         </div>
-        <div className="col-sm-12 m-3">
+        <div className="col-sm-12 m-3 overflow-auto">
           <QoutesTable />
         </div>
       </div>

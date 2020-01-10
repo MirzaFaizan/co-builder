@@ -5,7 +5,13 @@ export default function ImagesLayout(){
         <div class="masonry-wrapper">
   <div class="masonry">
   <div class="masonry-item">
-    <img src="https://picsum.photos/450/325?image=100" alt="Dummy Image" class="masonry-content" />
+    <img src="https://unsplash.it/529/529/" alt="Dummy Image" class="masonry-content" />
+  </div>
+  <div class="masonry-item">
+    <img src="https://unsplash.it/534/529/" alt="Dummy Image" class="masonry-content" />
+  </div>
+  <div class="masonry-item">
+    <img src="https://unsplash.it/525/529/" alt="Dummy Image" class="masonry-content" />
   </div>
   <div class="masonry-item">
     <img src="https://picsum.photos/450/450?image=200" alt="Dummy Image" class="masonry-content" />
@@ -92,7 +98,22 @@ export default function ImagesLayout(){
     <img src="https://picsum.photos/450/380?image=65" alt="Dummy Image" class="masonry-content" />
   </div>
   <div class="masonry-item">
-    <img src="https://picsum.photos/450/300?image=78" alt="Dummy Image" class="masonry-content" />
+    <img src="https://unsplash.it/524/524/" alt="Dummy Image" class="masonry-content" />
+  </div>
+  <div class="masonry-item">
+    <img src="https://unsplash.it/524/525/" alt="Dummy Image" class="masonry-content" />
+  </div>
+  <div class="masonry-item">
+    <img src="https://unsplash.it/524/529/" alt="Dummy Image" class="masonry-content" />
+  </div>
+  <div class="masonry-item">
+    <img src="https://unsplash.it/524/524/" alt="Dummy Image" class="masonry-content" />
+  </div>
+  <div class="masonry-item">
+    <img src="https://unsplash.it/524/525/" alt="Dummy Image" class="masonry-content" />
+  </div>
+  <div class="masonry-item">
+    <img src="https://unsplash.it/524/529/" alt="Dummy Image" class="masonry-content" />
   </div>
 </div>
 </div>
