@@ -29,7 +29,7 @@
   /* Masonry on large screens */
   @media only screen and (min-width: 1024px) {
     .masonry {
-      column-count: 4;
+      column-count: 3;
     }
   }
   
@@ -46,3 +46,55 @@
       column-count: 2;
     }
   }
+  .custom-color-tobacco-brown-bg {
+    background-color: #6C5A46 !important;
+}
+
+.custom-color-woodland-bg {
+   background-color: #656E41 !important;
+}
+
+.custom-color-tobacco-brown-bg {
+  background-color: #6C5A46 !important;
+}
+
+.custom-color-woodland-bg {
+ background-color: #656E41 !important;
+}
+
+/* icons */
+/* .custom-btn-bg:hover { 
+  background-color: var(--Carrot-Orange) !important;
+}
+
+.pinterrest-boards-section__icon-circle {
+   width: 30px;
+   height: 30px;
+}
+
+.pinterest-boards-section__height {
+    height: 30px;
+}
+
+.pinterest-boards-notification-box {
+  height: 20px !important;
+  width: 20px !important;
+} */
+
+.pinterest-boards-section-buttons {
+
+  position: relative;
+
+  width: 95%;
+  height: 60px;
+  overflow: hidden;
+}
+
+.pinterest-boards-section-buttons__pos-fixed {
+  position: absolute;
+  top: 20px;
+  right: 0;
+
+  height:0px;
+  box-shadow: -15px 0px 98px 120px rgba(255,255,255,1);
+}
