@@ -5,7 +5,7 @@ export default function Navbar(){
         <nav class="navbar navbar-expand-md mb-0">
             <div class="container-fluid flex-nowrap flex-sm-wrap">
               <div class="navbar-translate d-flex align-items-center">
-                <img alt="Co-builder" style={{height:'40px', width:'14rem'}} src='https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo2.png' />
+               <h3 className="m-0 text-light font-weight-bold font-familt-sofia">CO-Builders</h3>
               </div>
               
               <div>

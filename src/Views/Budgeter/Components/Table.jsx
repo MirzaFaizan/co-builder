@@ -16,7 +16,7 @@ export default function Table (){
             <td><div className="m-1 border text-center h-100 w-100 bg-white">$500</div></td>
             <td><div className="m-1 border text-center h-100 w-100 bg-white">$500</div></td>
             <td><div className="d-flex flex-row justify-content-around "><div className="m-1 border text-center h-100 w-100 text-danger bg-white font-weight-bold">$500</div>
-               <i className="fas fa-ellipsis-h fa-2x ml-3"></i>
+               <i className="fas fa-ellipsis-h fa-2x ml-3 text-grey"></i>
             </div>
             </td>
           </tr>
@@ -25,7 +25,7 @@ export default function Table (){
             <td><div className="m-1 border text-center h-100 w-100 bg-white">$500</div></td>
             <td><div className="m-1 border text-center h-100 w-100 bg-white">$500</div></td>
             <td><div className="d-flex flex-row justify-content-around"><div className="m-1 border text-center h-100 w-100 text-danger font-weight-bold bg-white">$500</div>
-               <i className="fas fa-ellipsis-h fa-2x ml-3"></i>
+               <i className="fas fa-ellipsis-h fa-2x ml-3 text-grey"></i>
             </div>
             </td>
           </tr>

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-
+@import url("https://fonts.googleapis.com/css?family=Sofia&display=swap");
 html { 
     overflow: hidden;
 }
@@ -7,7 +7,9 @@ html {
 * { 
     font-family: 'Open Sans', sans-serif;
 }
-
+.font-familt-sofia{
+    font-family: 'Sofia', cursive !important;
+}
 header .navbar { 
     
     background: linear-gradient(to right, #ee1c25 , #fcac3b) !important;
@@ -165,7 +167,7 @@ main .progress-bar  {
 @media (max-width: 768px) { 
     .side-bar {
         height: 89vh;
-        width: 40px !important;
+        width: 55px !important;
         z-index: 1030;
         overflow-x: hidden;
         background-color: #fff;
@@ -177,8 +179,8 @@ main .progress-bar  {
 }
 
   .side-bar:hover {
-        width: 80% !important;
-        position: absolute;
+        width: 80% !important; 
+         position: absolute;
     }
    
     .side-bar li {

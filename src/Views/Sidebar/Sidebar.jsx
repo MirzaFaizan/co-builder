@@ -19,7 +19,7 @@ const SideBarData = [
   {
     IconName: "far fa-heart",
     Name: "Pinterest Boards",
-    routeName: "pinterest-boards"
+    routeName: "pinterest-board"
   },
   {
     IconName: "fas fa-users",
@@ -111,6 +111,7 @@ export default function SideBar() {
             >
               <i className={`ml-3 ${value.IconName}`}></i>
               <span className="ml-3">{value.Name}</span>
+           
             </Link>
             {value.routeName === "checklist" && active === "checklist"
               ? subList()

@@ -27,83 +27,6 @@
 
 }
 
-html { 
-    overflow: hidden;
-}
-
-* { 
-    font-family: 'Open Sans', sans-serif;
-}
-
-header .navbar { 
-    
-    background: linear-gradient(to right, var(--color-Alizarin) , var(--color-NaN));
-}
-
-
-.header-notification-box {
-    
-        left: unset !important;
-        right: -5px !important;
-        top: -4px !important;
-        font-size: .5rem;
-        height: 12px;
-        width: 12px;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    
-}
-
-.side-bar ul { 
-    list-style: none;
-}
-
-.side-bar a {
-    color: var(--color-Gray62);
-}
-
-.side-bar__link-active,
-.side-bar__link-active:active,
-.side-bar__link:hover { 
-    border-left: var(--color-Outrageous-Orange) 5px solid !important; 
-}
-
-.side-bar__link-active,
-.side-bar__link-active:active,
-.custom-active,
-.custom-active:active { 
-    color: var(--color-Outrageous-Orange-light) !important;
-}
-
-.custom-active:hover,
-.side-bar__link:hover {
-    
-    color: var(--color-Outrageous-Orange) !important;
-    transition: all .4s ease-in-out;
-   
-}
-
-.side-bar__link-active i,
-.side-bar__link-active i:active { 
-   margin-left: .7rem !important;
-}
-
-/* =======Bootstrap-Switch======= */
-
-.side-bar ul .bootstrap-switch { 
-    background: var(--color-Dark-Orchid);
-}
-
-.side-bar ul .bootstrap-switch.bootstrap-switch-off .bootstrap-switch-label { 
-    background: var(--color-white) !important;
-}
-
-
-.side-bar ul .bootstrap-switch.bootstrap-switch-on .bootstrap-switch-label { 
-     background: rgba(23, 23, 23, 0.4) !important;
-}
 
 /* =====Main-Section======= */
 
@@ -343,7 +266,7 @@ main::-webkit-scrollbar-track {
 
 /* // Medium devices (tablets, less than 992px) */
 @media (max-width: 1199.98px) {  
-    .side-bar {
+    /* .side-bar {
         height: auto !important;
         width: 55px !important;
         z-index: 1030;
@@ -364,7 +287,7 @@ main::-webkit-scrollbar-track {
   
     .side-bar li {
        width: 300px !important;
-    }
+    } */
 
     main {
         height: 93vh;
