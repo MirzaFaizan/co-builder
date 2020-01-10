@@ -60,7 +60,7 @@ export default function PintrestView(){
              </div> --> */}
          
               </div>
-         
+{/*          
               <div class="pinterest-boards-section-buttons">
                  <button class="btn btn-primary custom-color-tobacco-brown-bg text-capitalize font-weight-bold">Floor plans</button>
                  <button class="btn btn-primary custom-color-woodland-bg text-capitalize font-weight-bold">treehouse</button>
@@ -73,7 +73,7 @@ export default function PintrestView(){
                      <i class="fas fa-chevron-right fa-2x"></i>
                  </button>
          
-              </div>
+              </div> */}
          <div className="col-sm-12 py-2">
          <ImagesLayout />
          </div>
