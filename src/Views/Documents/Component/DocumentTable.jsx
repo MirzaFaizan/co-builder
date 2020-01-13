@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Model from './DocumentModel/Model';
 export default function Table(){
-  const [openModel, setOpenModel] = useState(true);
+  const [openModel, setOpenModel] = useState(false);
   const ToggleModel = () => {
    setOpenModel(!openModel);
   }
