@@ -11,6 +11,7 @@ import Qoutes from './Views/Qoutes/Qoutes';
 import SubContractors from './Views/SubContractors/SubContractors';
 import PintrestBoard from './Views/PintrestBoard/PintrestBoard';
 import Documents from './Views/Documents/Documents';
+import Timeline from './Views/Timeline/Timeline';
 
 const customHistory = createBrowserHistory();
 
@@ -28,6 +29,8 @@ function CustomRoutes(props) {
   <Route exact path="/sub-contractors" component={SubContractors} />
   <Route exact path="/pinterest-board" component={PintrestBoard} />
   <Route exact path="/documents" component={Documents} />
+  <Route exact path="/timeline" component={Timeline} />
+  
   </>
     )
   }
