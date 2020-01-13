@@ -29,11 +29,13 @@ export default function Model({openModel, setOpenModel}){
                     <span>&times;</span>
                   </button>
                 </div>
-                <div className="modal-body col-sm-12 d-flex">
-                <div className="col-sm-7 h-100">
-                <embed src= "https://arxiv.org/pdf/quant-ph/0410100.pdf" className="h-100 w-100" />
+                <div className="modal-body col-sm-12 col-lg-12 d-flex pdf-preview-area">
+                <div className="col-sm-12 col-lg-7 h-100">
+                {/* <embed src= "https://arxiv.org/pdf/quant-ph/0410100.pdf" className="h-100 w-100" />
+                 */}
+                 <object data="https://arxiv.org/pdf/quant-ph/0410100.pdf" type="application/pdf" width="100%" height="100%"></object>
                 </div>
-                <div className="col-sm-5">
+                <div className="col-sm-12 col-lg-5">
                <h3 className="text-black font-weight-bold text-orange">
                    Electronics
                </h3>
@@ -44,6 +46,7 @@ export default function Model({openModel, setOpenModel}){
                         Document 1
                     </div>
                   </div>
+                  
                </div>
                
                 </div>
@@ -64,6 +67,7 @@ export default function Model({openModel, setOpenModel}){
                 </div>
                 </div>
               </div>
+              
 
 			</div>
 		</div>
