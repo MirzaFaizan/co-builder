@@ -28,7 +28,3 @@ export default function Documents(){
       </div>
     )
 }
-
-
-
-{/* <embed src= "https://arxiv.org/pdf/quant-ph/0410100.pdf" style={{width:'100%', height:'100%'}} /> */}
