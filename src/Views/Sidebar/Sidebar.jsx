@@ -96,7 +96,7 @@ export default function SideBar() {
   };
   // side-bar__link-active
   return (
-    <section className="col-md-3 col-xl-2 side-bar bg-white text-capitalize p-2">
+    <section className="col-md-3 overflow-auto vh-100 col-xl-2 side-bar bg-white text-capitalize p-2">
       <ul className="list-group">
         {SideBarData.map(value => (
           <li className="my-3 ml-2">

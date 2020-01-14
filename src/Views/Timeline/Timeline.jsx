@@ -1,7 +1,7 @@
 import React from 'react';
 import './timeline.css';
+import Table from './Components/TimelineTable';
 import ProgressCard from './Components/Cards';
-import ProgressBar from '../Checklist/Component/Progressbar';
 const data=[{color:"#13545B",
 title:'Phase 1',
 heading:'Site Prep and Foundation',
@@ -58,11 +58,9 @@ export default function Timeline(){
                    ))}
                
                </div>
-               {/* <div>
-               <h4 className="mb-0 mt-1"><span className="custom-text-gold font-weight-bold">Total Days : 500</span> </h4>
-               <h4 className="m-0 mt-1"><span className="text-grey">Total days passed: 333</span> </h4>
-        <ProgressBar />
-        </div> */}
+               <div className="mt-4">
+              <Table />
+        </div>
         </div>
         </div>
     )
