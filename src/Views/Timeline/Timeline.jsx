@@ -17,6 +17,10 @@ export default function Timeline(){
                </div>
                <div className="col-sm-12 pt-3 d-flex flex-row overflow-auto">
                <ProgressCard />
+               <ProgressCard />
+               <ProgressCard />
+               <ProgressCard />
+
                </div>
                <div>
                <h4 className="mb-0 mt-1"><span className="custom-text-gold font-weight-bold">Total Days : 500</span> </h4>

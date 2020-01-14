@@ -16,7 +16,7 @@ export default function Model({openModel, setOpenModel}){
 <>
 <div className="container demo model-swipe documment-model">
 	<div className="modal right fade" aria-labelledby="myModalLabel2">
-		<div className="model-dialog-custom" style={{right:Right}}>
+		<div className="model-dialog-custom document" style={{right:Right}}>
     <div className="modal-content">
                 <div className="modal-header bg-white">
                   <button type="button" className="close" 
