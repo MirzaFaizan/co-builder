@@ -1,24 +1,10 @@
-.container-hotel {
-    /* max-width: 1200px; */
-    /* min-width: 360px; */
-    margin: 0 auto;
-}
-.container-hotel:before, .container-hotel:after {
-    content: '';
-    display: block;
-    clear: both;
-}
 
 .post-module {
     position: relative;
     z-index: 1;
     display: block;
-    /* background: #FFFFFF;     */
-    min-width: 270px;
-    height: 370px;
-    /* -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15); */
-    /* box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15); */
+    min-width: 220px;
+    height: 320px;
     -webkit-transition: all 0.3s linear 0s;
     -moz-transition: all 0.3s linear 0s;
     -ms-transition: all 0.3s linear 0s;
@@ -50,7 +36,6 @@
     position: absolute;
     top: -34px;
     left: 0;
-    background: #e5349b;
     padding: 10px 15px;
     color: #FFFFFF;
     font-size: 14px;
@@ -61,13 +46,13 @@
     margin: 0;
     padding: 0 0 10px;
     color: #333333;
-    font-size: 26px;
+    font-size: 20px;
     font-weight: 700;
 }
 .post-module .post-content .sub_title {
     margin: 0;
     padding: 0 0 20px;
-    color: #e5349b;
+   
     font-size: 20px;
     font-weight: 400;
 }
@@ -79,7 +64,7 @@
     /* display:none; */
      max-height: 0px;
      opacity: 1;
-     overflow:hidden;
+     overflow:auto;
      transition-property: all !important;
      transition-duration: .5s !important;
      transition-timing-function: cubic-bezier(0, 1, 0.5, 1) !important;
@@ -93,7 +78,7 @@
 
 }
 
-.col-sm-3.pl-0.pr-0.mb-4.progressCard.shadow{
+.pl-0.pr-0.mb-4.progressCard.shadow{
     border-radius: 10px 15px 8px 81px;
 }
 

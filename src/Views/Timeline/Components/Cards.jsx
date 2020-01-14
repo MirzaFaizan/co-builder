@@ -1,8 +1,8 @@
 import React from 'react';
-export default function Card(){
+export default function Card(props){
     return(
-<div>
-<div class="col-sm-3 pl-0 pr-0 mr-4 mb-4 progressCard shadow">
+<div className="cursor-pointer">
+<div class="pl-0 pr-0 mr-4 mb-4 progressCard shadow">
 {/* <!-- Post--> */}
 <div class="post-module">
   {/* <!-- Thumbnail--> */}
@@ -11,30 +11,25 @@ export default function Card(){
   </div>
   {/* <!-- Post Content--> */}
   <div class="post-content">
-  <div class="category">Dirt Work</div>
-<h1 class="title">Dirt work 14 feb</h1>
-    <h2 class="sub_title text-truncate">
-    It usually begins with: “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.” The purpose of lorem ipsum is to create a natural looking block of text (sentence, paragraph, page, etc.) that doesn't distract from the layout.
-      </h2>
+    <div class="category" style={{background:props.color}}>{props.title}</div>
+    <h1 class="title">{props.heading}</h1>
+    <h3 class="m-0 sub_title text-truncate" style={{color:props.color}}>
+      {props.description}
+      </h3>
     <p class="description">
-    It usually begins with: “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.” The purpose of lorem ipsum is to create a natural looking block of text (sentence, paragraph, page, etc.) that doesn't distract from the layout.
+    {props.description}
       </p>
   </div>
   
 </div>
 </div>
-<div className="pl-0 pr-0 mb-4 d-flex align-items-center" style={{minWidth: '270px'}}>
-  <span className="d-flex justify-content-center align-items-center" style={{background:'#E5349B', borderRadius:'50%', color:'white', height:'50px', width:'50px'}}>
-    2016
+<div className="pl-0 pr-0 mb-4 d-flex align-items-center text-center" style={{minWidth: '150px',}}>
+  <span className="d-flex p-1 justify-content-center align-items-center flex-column shadow" style={{background:props.color, borderRadius:'50%', color:'white', height:'60px', width:'60px', border:'4px solid white'}}>
+    22feb&nbsp;<span className="font-weight-bold">2016</span>
   </span>
-  <span className="d-flex justify-content-center align-items-center h-fit-content" style={{border:'3px solid #E5349B', width:'90%'}}>
+  <span className="d-flex justify-content-center align-items-center h-fit-content shadow" style={{border:`4px solid ${props.color}`, width:'76%'}}>
   </span>
 </div>
   </div>
     )
 }
-{/* <div className="col-sm-3 pl-0 pr-0 mb-4 d-flex justify-content-center align-items-center" style={{minWidth: '270px'}}>
-    <div className="" style={{border:'4px solid #E5349B', height:'100px', borderRadius:10}}>
-
-    </div>
-  </div> */}
