@@ -1,0 +1,4 @@
+.modal.fade .modal-dialog {
+    transform: unset !important;
+       transition: transform .3s ease-out;
+}
