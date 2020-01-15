@@ -29,7 +29,7 @@ export default function Table(){
             </tr>
           </thead>
           <tbody>
-            <tr class="border-bottom">
+            <tr class="border-bottom text-center">
               <td>cabinets-javier</td>
               <td></td>
               <td>javier@gmail.com</td>

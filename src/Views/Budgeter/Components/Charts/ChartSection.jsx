@@ -3,7 +3,7 @@ import DonutChart from './DonutChart';
 export default function ChartSection (props){
     return(
         <>
-        <div className={`${props.isRoundedBorder ? 'charts-background-rounded' : ''} p-1`} style={{height:'35%', width:'35%'}}>
+        <div className={`${props.isRoundedBorder ? 'charts-background-rounded shadow' : ''} p-1`} style={{height:'35%', width:'35%'}}>
                 <DonutChart data={props.data} lineWidth={props.lineWidth} />
                 </div>
 
