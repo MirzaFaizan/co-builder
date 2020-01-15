@@ -75,9 +75,10 @@ export default function Dashboard(){
       
                           <ChecklistCard />
                           <div className="col-sm-12 bg-light mt-3">
-                              <h3 className="font-weight-bold mb-1 mt-2 custom-text-gold">
-                                  Budger
-                              </h3>
+                          <div class="d-flex mt-2 align-items-center justify-content-between flex-column flex-sm-row">
+            <div class="my-0 custom-heading custom-text-gold">Budger</div>
+            <button class="btn btn-info btn-round" type="button">See All</button>
+        </div>
                           <Charts />
                           </div>
                           
