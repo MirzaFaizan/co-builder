@@ -16,7 +16,7 @@ export default function Navbar(){
          
             <div class="container-fluid flex-nowrap flex-sm-wrap">
               <div class="navbar-translate d-flex align-items-center">
-               <h3 className="m-0 text-light font-weight-bold font-familt-sofia">CO-Builders</h3>
+               <h3 className="m-0 text-light font-weight-bold font-familt-sofia">CO-Builder</h3>
               </div>
               
               <div>

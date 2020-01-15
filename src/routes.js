@@ -12,13 +12,13 @@ import SubContractors from './Views/SubContractors/SubContractors';
 import PintrestBoard from './Views/PintrestBoard/PintrestBoard';
 import Documents from './Views/Documents/Documents';
 import Timeline from './Views/Timeline/Timeline';
+import ProgressPhotos from './Views/ProgressPhotos/ProgressPhotos';
 
 const customHistory = createBrowserHistory();
 
 const type = localStorage.getItem('loggedIn'); //update when user logs in;
 
 function CustomRoutes(props) {
-  console.log(props)
   const routes =()=>{
     return(
       <>
@@ -30,7 +30,7 @@ function CustomRoutes(props) {
   <Route exact path="/pinterest-board" component={PintrestBoard} />
   <Route exact path="/documents" component={Documents} />
   <Route exact path="/timeline" component={Timeline} />
-  
+  <Route exact path="/progress-photos" component={ProgressPhotos} />
   </>
     )
   }

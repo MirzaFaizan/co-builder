@@ -150,3 +150,6 @@ input:checked + .slider:before {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+.border-radius-0{
+border-radius: 0 !important;
+}
