@@ -47,7 +47,7 @@ export default function ProgressPhotos (){
           <div className="col-sm-12 timeline-cards pt-3 d-flex flex-wrap">
               {data.map(value =>(
                   <div className="col-sm-6 col-md-6 col-lg-4">
-                      <div class="pl-0 pr-0 mb-3 border-radius-0 shadow">
+                      <div class="pl-0 pr-0 mr-3 mb-3 border-radius-0 shadow">
 <div class="post-module">
   <div class="thumbnail">
     <img src={"https://s3-us-west-1.amazonaws.com/cdn.tiptopvacation.com/offers/hotels/beach-resortcabana-bay-beach-resortorlandofl.png"} />

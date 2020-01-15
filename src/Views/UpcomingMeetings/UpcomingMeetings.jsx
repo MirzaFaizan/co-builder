@@ -1,19 +1,16 @@
-import React, {useState} from 'react';
-import Model from './Component/Model/Model';
-import ProgressBar from './Component/Progressbar';
-import MonthBasedChecklist from './Component/MonthBasedChecklist/Index';
-export default function CheckList(){
-  const [openModel, setOpenModel] = useState(false);
+import React,{useState} from 'react';
+import Model from '../Checklist/Component/Model/Model';
+import ProgressBar from '../Checklist/Component/Progressbar';
+import MonthBasedChecklist from '../Checklist/Component/MonthBasedChecklist/Index';
+export default function UpcomingMeeting(){
+    const [openModel, setOpenModel] = useState(false);
  const ToggleModel = () => {
   setOpenModel(!openModel);
  }
- 
     return(
         <div className="main-testing bg-white p-4">
    <Model openModel={openModel} setOpenModel={setOpenModel} />
-  
         <div>
-          
           <div className="d-flex flex-column flex-md-row justify-content-between align-items-center align-items-lg-baseline">
            <h3 className="mb-0"><span className="custom-text-gold font-weight-bold">427</span> Days to go</h3>
            
@@ -23,13 +20,7 @@ export default function CheckList(){
            </div>
           </div>
    <ProgressBar />
-          
-   
          </div>
-   
-        
-         
-   
        {/* <!-- History-Section-Start  --> */}
         <div className="history-section">
          
@@ -49,16 +40,12 @@ export default function CheckList(){
          </div>
          
         </div>
-         {/* <!-- Toggle-Button-End --> */}
-   
-         {/* <!-- Toggle-Here-Start -->   */}
         <div>
-          {/* <!-- History-Section-1  --> */}
+         
          <MonthBasedChecklist
          ToggleModel={ToggleModel}
          />
           </div>
-      {/* <!-- History-Section-End  --> */}
         </div>
       </div>
     )

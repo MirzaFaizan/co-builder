@@ -13,6 +13,8 @@ import PintrestBoard from './Views/PintrestBoard/PintrestBoard';
 import Documents from './Views/Documents/Documents';
 import Timeline from './Views/Timeline/Timeline';
 import ProgressPhotos from './Views/ProgressPhotos/ProgressPhotos';
+import UpComingMeetings from './Views/UpcomingMeetings/UpcomingMeetings';
+import Suppliers from './Views/Suppliers/Suppliers';
 
 const customHistory = createBrowserHistory();
 
@@ -31,6 +33,9 @@ function CustomRoutes(props) {
   <Route exact path="/documents" component={Documents} />
   <Route exact path="/timeline" component={Timeline} />
   <Route exact path="/progress-photos" component={ProgressPhotos} />
+  <Route exact path="/upcomming-meetings" component={UpComingMeetings} />
+  <Route exact path="/suppliers" component={Suppliers} />
+
   </>
     )
   }
