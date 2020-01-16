@@ -1,10 +1,11 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 export default function ChecklistCard(){
     return(
         <div class="text-capitalize bg-light mt-3 py-3 pr-4 rounded-lg col">
         <div class="d-flex align-items-center justify-content-between flex-column flex-sm-row">
             <div class="my-0 custom-heading custom-color-green">next on your checklist</div>
-            <button class="btn btn-info btn-round" type="button">See All</button>
+            <Link to="/checklist" class="btn btn-info btn-round">See All</Link>
         </div>
 
         <div>

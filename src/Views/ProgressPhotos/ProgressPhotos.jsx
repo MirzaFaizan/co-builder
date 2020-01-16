@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from '../Timeline/Components/card';
+import Card from './Components/ProgressPhoto';
 const data=[{color:"#13545B",
 title:'Phase 1',
 heading:'Site Prep and Foundation',
@@ -61,22 +61,9 @@ export default function ProgressPhotos (){
           ) : (
                  <div className="col-sm-12 timeline-cards pt-3 d-flex flex-wrap">
                  {data.map(value =>(
-                     <div className="col-sm-6 col-md-6 col-lg-4 cursor-pointer" onClick={()=>setShowphoto(true)}>
-                         <div class="pl-0 pr-0 mr-3 mb-3 border-radius-0 shadow">
-   <div class="post-module">
-     <div class="thumbnail">
-       <img src={"https://s3-us-west-1.amazonaws.com/cdn.tiptopvacation.com/offers/hotels/beach-resortcabana-bay-beach-resortorlandofl.png"} />
-     </div>
-     <div class="post-content border-radius-0 p-3">
-       <div class="category" style={{background:value.color}}>{value.title}</div>
-       <div className="custom-text-gold font-weight-bold">
-           feb 22, 2019
-           </div>
-     </div>
-     
-   </div>
-   </div>
-                   </div>
+                <Card setShowphoto={setShowphoto}
+                value={value}
+                />
                  ))}
              
              </div>

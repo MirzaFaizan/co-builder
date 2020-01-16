@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 const SideBarData = [
   {
     IconName: "fas fa-home",
@@ -58,7 +58,7 @@ const SideBarData = [
   }
 ];
 export default function SideBar() {
-  const [active, setActive] = useState((window.location.pathname.split('/')[1]));
+  const [active, setActive] = React.useState('')
   const [showCompleted, setShowCompleted] = useState(false);
   const toggle = ()=>{
     setShowCompleted(true)
@@ -100,19 +100,16 @@ export default function SideBar() {
       <ul className="list-group">
         {SideBarData.map(value => (
           <li className="my-3 ml-2">
-            <Link
+            <NavLink
+            activeClassName="side-bar__link-active"
               to={value.routeName}
-              className={`d-flex side-bar__link align-items-baseline text-decoration-none ${
-                active === value.routeName ? "side-bar__link-active" : ""
-              }`}
-              onClick={() => {
-                setActive(value.routeName);
-              }}
+              className={`d-flex side-bar__link align-items-baseline text-decoration-none`}
+              onClick={()=>setActive(value.routeName)}
             >
               <i className={`ml-3 ${value.IconName}`}></i>
               <span className="ml-3">{value.Name}</span>
            
-            </Link>
+            </NavLink>
             {value.routeName === "checklist" && active === "checklist"
               ? subList()
               : null}
