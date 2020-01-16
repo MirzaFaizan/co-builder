@@ -26,11 +26,11 @@ const SideBarData = [
     Name: "Sub Contractors",
     routeName: "sub-contractors"
   },
-  {
-    IconName: "fas fa-pencil-alt",
-    Name: "Quotes",
-    routeName: "qoutes"
-  },
+  // {
+  //   IconName: "fas fa-pencil-alt",
+  //   Name: "Quotes",
+  //   routeName: "qoutes"
+  // },
   {
     IconName: "far fa-folder-open",
     Name: "Documents",

@@ -137,6 +137,27 @@ export default function Dashboard() {
               </div>
               <div className="col-sm-12 bg-light mt-3 overflow-auto">
               <CardsHeading
+              heading="Subcontractors"
+              route="/subcontractors"
+              />
+                <SubcontractorsTable />
+              </div>
+              {/* <div className="col-sm-12 bg-light mt-3 overflow-auto">
+              <CardsHeading
+              heading="Qoutes"
+              route="/qoutes"
+              />
+                <QoutesTable />
+              </div> */}
+              <div className="col-sm-12 bg-light mt-3 overflow-auto">
+              <CardsHeading
+              heading="Documents"
+              route="/documents"
+              />
+                <DocumentsTable />
+              </div>
+              <div className="col-sm-12 bg-light mt-3 overflow-auto">
+              <CardsHeading
               heading="Progress Photos"
               route="/progress-photos"
               />
@@ -148,27 +169,6 @@ export default function Dashboard() {
                  ))}
              
              </div>
-              </div>
-              <div className="col-sm-12 bg-light mt-3 overflow-auto">
-              <CardsHeading
-              heading="Subcontractors"
-              route="/subcontractors"
-              />
-                <SubcontractorsTable />
-              </div>
-              <div className="col-sm-12 bg-light mt-3 overflow-auto">
-              <CardsHeading
-              heading="Qoutes"
-              route="/qoutes"
-              />
-                <QoutesTable />
-              </div>
-              <div className="col-sm-12 bg-light mt-3 overflow-auto">
-              <CardsHeading
-              heading="Documents"
-              route="/documents"
-              />
-                <DocumentsTable />
               </div>
               <div className="col-sm-12 bg-light mt-3 overflow-auto">
               <CardsHeading
