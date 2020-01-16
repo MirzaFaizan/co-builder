@@ -6,14 +6,6 @@ import * as serviceWorker from './serviceWorker';
 import axios from 'axios';
 if (process.env.API) axios.defaults.baseURL = process.env.API;
 axios.defaults.baseURL = 'https://cobuilder-api.herokuapp.com/';
-
-if(localStorage.getItem("token")){
-    axios.defaults.headers.common['Authorization'] = "token"+" "+localStorage.getItem("token");
-}
-else{
-    delete axios.defaults.headers.common['Authorization'];
-}
-
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

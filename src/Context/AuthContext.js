@@ -1,6 +1,5 @@
 import React, { useReducer, useState, useEffect } from "react";
-import jwt from 'jsonwebtoken';
-
+import setAuthorizationToken from './SetAuthHeaders';
 let reducer = (info, newInfo) => {
     if (newInfo === null) {
         localStorage.removeItem("info");
@@ -8,17 +7,18 @@ let reducer = (info, newInfo) => {
     }
     return { ...info, ...newInfo };
 };
-    
 
 const initialState = {
-    name: "John Smith",
-    age: 52,
-    email: "john.smith@gmail.com"
+    userEmail: "",
+    userId:"",
+    username:"",
+    userAvatar:""
 };
 const localState = JSON.parse(localStorage.getItem("info"));
 const InfoContext = React.createContext();
-
+setAuthorizationToken();
 function InfoProvider(props) {
+
     const [info, setInfo] = useReducer(reducer, localState || initialState);
     useEffect(() => {
         localStorage.setItem("info", JSON.stringify(info));

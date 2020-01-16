@@ -1,6 +1,10 @@
 import React from 'react';
 import './profile.css';
 export default function Profile({openProfile, setOpenProfile}){
+const logout = () => {
+localStorage.clear();
+window.location.reload();
+}
     return(
 //   <!-- Modal -->
 <div class="modal fade" id="exampleModalScrollable">
@@ -30,8 +34,9 @@ export default function Profile({openProfile, setOpenProfile}){
               </div>
           </div>
           
-          <div class="d-flex justify-content-center">
+          <div class="d-flex justify-content-around">
               <button type="button" class="btn btn-primary btn-round">Save changes</button>
+              <button type="button" class="btn btn-primary btn-round" onClick={()=>logout()}>Logout</button>
             </div>
 
       </div>
