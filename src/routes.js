@@ -18,7 +18,7 @@ import Suppliers from './Views/Suppliers/Suppliers';
 
 const customHistory = createBrowserHistory();
 
-const type = localStorage.getItem('loggedIn'); //update when user logs in;
+const type = localStorage.getItem('token'); //update when user logs in;
 
 function CustomRoutes(props) {
   const routes =()=>{
