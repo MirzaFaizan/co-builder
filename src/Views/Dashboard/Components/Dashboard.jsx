@@ -138,7 +138,7 @@ export default function Dashboard() {
               <div className="col-sm-12 bg-light mt-3 overflow-auto">
               <CardsHeading
               heading="Subcontractors"
-              route="/subcontractors"
+              route="/sub-contractors"
               />
                 <SubcontractorsTable />
               </div>
@@ -172,8 +172,8 @@ export default function Dashboard() {
               </div>
               <div className="col-sm-12 bg-light mt-3 overflow-auto">
               <CardsHeading
-              heading="Subcontractors"
-              route="/subcontractors"
+              heading="Suppliers"
+              route="/suppliers"
               />
                 <SubcontractorsTable />
               </div>
