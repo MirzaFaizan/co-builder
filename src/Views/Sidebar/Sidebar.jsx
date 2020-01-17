@@ -58,11 +58,11 @@ const SideBarData = [
   }
 ];
 export default function SideBar() {
-  const [active, setActive] = React.useState('')
+  const [active, setActive] = React.useState("");
   const [showCompleted, setShowCompleted] = useState(false);
-  const toggle = ()=>{
-    setShowCompleted(true)
-  }
+  const toggle = () => {
+    setShowCompleted(true);
+  };
   const subList = () => {
     return (
       <ul className="pt-3">
@@ -101,14 +101,13 @@ export default function SideBar() {
         {SideBarData.map(value => (
           <li className="my-3 ml-2">
             <NavLink
-            activeClassName="side-bar__link-active"
+              activeClassName="side-bar__link-active"
               to={value.routeName}
               className={`d-flex side-bar__link align-items-baseline text-decoration-none`}
-              onClick={()=>setActive(value.routeName)}
+              onClick={() => setActive(value.routeName)}
             >
               <i className={`ml-3 ${value.IconName}`}></i>
               <span className="ml-3">{value.Name}</span>
-           
             </NavLink>
             {value.routeName === "checklist" && active === "checklist"
               ? subList()

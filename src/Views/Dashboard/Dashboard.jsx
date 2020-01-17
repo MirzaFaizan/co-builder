@@ -5,7 +5,8 @@ import Dashboard from './Components/Dashboard';
 import { InfoContext } from "../../Context/AuthContext";
 
 export default function DashboardView(props){
-    const {info} = React.useContext(InfoContext);    
+    const {info} = React.useContext(InfoContext);  
+    console.log(info)  
     return(
  <Dashboard />
     )

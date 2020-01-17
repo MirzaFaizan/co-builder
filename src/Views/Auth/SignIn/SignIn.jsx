@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./css/style.css";
 import "./fonts/material-icon/css/material-design-iconic-font.css";
 import Notification from "../../../Components/Notification";
 import { Redirect } from "react-router-dom";
-import axios from "axios";
 import jwt from "jsonwebtoken";
 import { InfoContext } from "../../../Context/AuthContext";
+import Api from '../../../ApiCalls/api';
 export default function Login(props) {
   const {setInfo} = React.useContext(InfoContext);
   const [email, setEmail] = useState("");
@@ -15,6 +15,7 @@ export default function Login(props) {
   const [loading, setLoading] = useState(false);
   const [notification, setNotification] = React.useState("");
   const [errorType, setErrorType] = React.useState("success");
+
   const _showPassword = () => {
     if (showPassword === "password") {
       setShowPassword("text");
@@ -23,14 +24,14 @@ export default function Login(props) {
     }
   };
   const token = localStorage.getItem("token");
-
   const setUserInformation = value => {
     let uservalue = jwt.decode(value);
+    const {username,userId,userEmail,userAvatar} = uservalue;
     setInfo({
-      userEmail: uservalue.userEmail,
-      userId: uservalue.userId,
-      username: uservalue.username,
-      userAvatar: uservalue.userAvatar
+      userEmail,
+      userId,
+      username,
+      userAvatar
     });
   };
 
@@ -44,38 +45,29 @@ export default function Login(props) {
       }, 2000);
     } else {
       setLoading(true);
-      const config = {
-        headers: {
-          "Content-Type": "application/json"
-        }
-      };
-
       const body = { email, password };
-
-      return axios
-        .post(`user/signin`, body, config)
-        .then(res => {
-          localStorage.setItem("type", "WizMeAdmin");
-          localStorage.setItem("token", res.data.Token);
-          setUserInformation(res.data.Token);
-          setOpen(true);
-          setLoading(false);
-          setErrorType("success");
-          setNotification("Login Successfully");
-          setTimeout(() => {
-            window.location.reload();
-          }, 1000);
-        })
-        .catch(err => {
-          setLoading(false);
-          setNotification("Email or Password Incorrect");
-          setOpen(true);
-          setErrorType("error");
-          setTimeout(() => {
-            setOpen(false);
-          }, 2000);
-        });
-    }
+Api.signIn(body)
+.then(res => {
+  localStorage.setItem("token", res.data.Token);
+  setUserInformation(res.data.Token);
+  setOpen(true);
+  setLoading(false);
+  setErrorType("success");
+  setNotification("Login Successfully");
+  setTimeout(() => {
+    window.location.reload();
+  }, 1000);
+})
+.catch(err => {
+  setLoading(false);
+  setNotification("Email or Password Incorrect");
+  setOpen(true);
+  setErrorType("error");
+  setTimeout(() => {
+    setOpen(false);
+  }, 2000);
+});
+}      
   }
 
   if (token == undefined) {
