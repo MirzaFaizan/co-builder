@@ -1,12 +1,14 @@
 :root {
   --color-bg-blue: #4B86DD;
-  --color-bg-grey:#BBBBBB;  
+  --color-bg-grey: #BBBBBB;
 }
-.text-blue{
-  color:var(--color-bg-blue) !important;
+
+.text-blue {
+  color: var(--color-bg-blue) !important;
 }
-.text-grey{
-  color:var(--color-bg-grey) !important;
+
+.text-grey {
+  color: var(--color-bg-grey) !important;
 }
 
 .App {
@@ -38,11 +40,13 @@
 .App-link {
   color: #61dafb;
 }
-.notification{
+
+.notification {
   position: absolute;
   left: 20px;
   bottom: 12px;
 }
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -51,9 +55,11 @@
     transform: rotate(360deg);
   }
 }
-.cursor-pointer{
+
+.cursor-pointer {
   cursor: pointer;
 }
+
 .switch {
   position: relative;
   display: inline-block;
@@ -61,7 +67,7 @@
   height: 25px;
 }
 
-.switch input { 
+.switch input {
   opacity: 0;
   width: 0;
   height: 0;
@@ -91,21 +97,22 @@
   transition: .4s;
 }
 
-input:checked + .slider {
+input:checked+.slider {
   background-color: #2196F3;
 }
 
-input:focus + .slider {
+input:focus+.slider {
   box-shadow: 0 0 1px #2196F3;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
   -webkit-transform: translateX(22px);
   -ms-transform: translateX(22px);
   transform: translateX(22px);
 }
 
 /* Rounded sliders */
+
 .slider.round {
   border-radius: 34px;
 }
@@ -113,21 +120,26 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-.h-fit-content{
+
+.h-fit-content {
   height: fit-content !important;
 }
-.h-35{
+
+.h-35 {
   min-height: 35vh;
 }
-.divider-vertical{
+
+.divider-vertical {
   height: 10px;
-  border: 1px solid var(--color-bg-grey) ;
+  border: 1px solid var(--color-bg-grey);
 }
-.font-16{
+
+.font-16 {
   font-size: 16px !important;
   font-weight: 600;
 }
-.font-30{
+
+.font-30 {
   font-size: calc(15px + 2vmin);
 }
 
@@ -137,19 +149,27 @@ input:checked + .slider:before {
 }
 
 /* Track */
+
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
 
 /* Handle */
+
 ::-webkit-scrollbar-thumb {
   background: var(--Carrot-Orange);
 }
 
 /* Handle on hover */
+
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-.border-radius-0{
-border-radius: 0 !important;
+
+.border-radius-0 {
+  border-radius: 0 !important;
+}
+
+.h-200px {
+  height: 200px !important;
 }
