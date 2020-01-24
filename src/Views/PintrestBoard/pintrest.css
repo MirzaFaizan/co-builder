@@ -1,57 +1,67 @@
-
 .masonry {
-    margin: 1.5em auto;
-    max-width: 95%;
-    column-gap: 1.5em;
-  }
-  
-  /* The Masonry Brick */
-  .item {
-    background: #fff;
-    padding: 1em;
-    margin: 0 0 1.5em;
-  }
-  .masonry-item, .masonry-content {
-    border-radius: 20px;
-    overflow: hidden;
-  }
-  .masonry-item {
-      margin-bottom: 1.5em;
-    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, .3));
-    transition: filter .25s ease-in-out;
-    opacity: 0.9;
- 
-  }
-  .masonry-item:hover {
-    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, .3));
-    opacity: 1;
-  }
-  /* Masonry on large screens */
-  @media only screen and (min-width: 1024px) {
-    .masonry {
-      column-count: 3;
-    }
-  }
-  
-  /* Masonry on medium-sized screens */
-  @media only screen and (max-width: 1023px) and (min-width: 768px) {
-    .masonry {
-      column-count: 3;
-    }
-  }
-  
-  /* Masonry on small screens */
-  @media only screen and (max-width: 767px) and (min-width: 540px) {
-    .masonry {
-      column-count: 2;
-    }
-  }
-  .custom-color-tobacco-brown-bg {
-    background-color: #6C5A46 !important;
+  margin: 1.5em auto;
+  max-width: 95%;
+  column-gap: 1.5em;
 }
 
-.custom-color-woodland-bg {
-   background-color: #656E41 !important;
+.pintrest {
+  background: transparent !important;
+  min-height: 85vh !important;
+  background-blend-mode: darken !important;
+  display: flex;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  justify-content: center;
+  align-items: center;
+}
+
+/* The Masonry Brick */
+
+.item {
+  background: #fff;
+  padding: 1em;
+  margin: 0 0 1.5em;
+}
+
+.masonry-item, .masonry-content {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.masonry-item {
+  margin-bottom: 1.5em;
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, .3));
+  transition: filter .25s ease-in-out;
+  opacity: 0.9;
+}
+
+.masonry-item:hover {
+  filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, .3));
+  opacity: 1;
+}
+
+/* Masonry on large screens */
+
+@media only screen and (min-width: 1024px) {
+  .masonry {
+    column-count: 3;
+  }
+}
+
+/* Masonry on medium-sized screens */
+
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+  .masonry {
+    column-count: 3;
+  }
+}
+
+/* Masonry on small screens */
+
+@media only screen and (max-width: 767px) and (min-width: 540px) {
+  .masonry {
+    column-count: 2;
+  }
 }
 
 .custom-color-tobacco-brown-bg {
@@ -59,10 +69,19 @@
 }
 
 .custom-color-woodland-bg {
- background-color: #656E41 !important;
+  background-color: #656E41 !important;
+}
+
+.custom-color-tobacco-brown-bg {
+  background-color: #6C5A46 !important;
+}
+
+.custom-color-woodland-bg {
+  background-color: #656E41 !important;
 }
 
 /* icons */
+
 /* .custom-btn-bg:hover { 
   background-color: var(--Carrot-Orange) !important;
 }
@@ -82,9 +101,7 @@
 } */
 
 .pinterest-boards-section-buttons {
-
   position: relative;
-
   width: 95%;
   height: 60px;
   overflow: hidden;
@@ -94,7 +111,6 @@
   position: absolute;
   top: 20px;
   right: 0;
-
-  height:0px;
-  box-shadow: -15px 0px 98px 120px rgba(255,255,255,1);
+  height: 0px;
+  box-shadow: -15px 0px 98px 120px rgba(255, 255, 255, 1);
 }

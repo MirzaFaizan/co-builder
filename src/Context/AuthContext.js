@@ -10,9 +10,13 @@ let reducer = (info, newInfo) => {
 
 const initialState = {
     userEmail: "",
-    userId:"",
-    username:"",
-    userAvatar:""
+    userId: "",
+    username: "",
+    userAvatar: "",
+    pintrestStatus: '',
+    pinterestUserName: '',
+    pinterestBoardName: '',
+    pinterestFirstTime: '',
 };
 const localState = JSON.parse(localStorage.getItem("info"));
 const InfoContext = React.createContext();

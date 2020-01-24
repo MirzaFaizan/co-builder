@@ -5,9 +5,9 @@ import Notification from "../../../Components/Notification";
 import { Redirect } from "react-router-dom";
 import jwt from "jsonwebtoken";
 import { InfoContext } from "../../../Context/AuthContext";
-import Api from '../../../ApiCalls/api';
+import Api from "../../../ApiCalls/api";
 export default function Login(props) {
-  const {setInfo} = React.useContext(InfoContext);
+  const { setInfo } = React.useContext(InfoContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState("password");
@@ -26,12 +26,23 @@ export default function Login(props) {
   const token = localStorage.getItem("token");
   const setUserInformation = value => {
     let uservalue = jwt.decode(value);
-    const {username,userId,userEmail,userAvatar} = uservalue;
+    const {
+      username,
+      userId,
+      userEmail,
+      userAvatar,
+      pinterestUserName,
+      pinterestBoardName,
+      pinterestFirstTime
+    } = uservalue;
     setInfo({
       userEmail,
       userId,
       username,
-      userAvatar
+      userAvatar,
+      pinterestUserName,
+      pinterestBoardName,
+      pinterestFirstTime
     });
   };
 
@@ -46,28 +57,28 @@ export default function Login(props) {
     } else {
       setLoading(true);
       const body = { email, password };
-Api.signIn(body)
-.then(res => {
-  localStorage.setItem("token", res.data.Token);
-  setUserInformation(res.data.Token);
-  setOpen(true);
-  setLoading(false);
-  setErrorType("success");
-  setNotification("Login Successfully");
-  setTimeout(() => {
-    window.location.reload();
-  }, 1000);
-})
-.catch(err => {
-  setLoading(false);
-  setNotification("Email or Password Incorrect");
-  setOpen(true);
-  setErrorType("error");
-  setTimeout(() => {
-    setOpen(false);
-  }, 2000);
-});
-}      
+      Api.signIn(body)
+        .then(res => {
+          localStorage.setItem("token", res.data.Token);
+          setUserInformation(res.data.Token);
+          setOpen(true);
+          setLoading(false);
+          setErrorType("success");
+          setNotification("Login Successfully");
+          setTimeout(() => {
+            window.location.reload();
+          }, 1000);
+        })
+        .catch(err => {
+          setLoading(false);
+          setNotification("Email or Password Incorrect");
+          setOpen(true);
+          setErrorType("error");
+          setTimeout(() => {
+            setOpen(false);
+          }, 2000);
+        });
+    }
   }
 
   if (token == undefined) {

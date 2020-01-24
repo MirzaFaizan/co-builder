@@ -36,6 +36,16 @@ const deleteDocumentFolder = async (id, body) => {
   }
 };
 
+const postPintrest = async (id, body) => {
+  try {
+    const res = await axios.post(`${apiConfig.pinterest}/${id}`, body);
+
+    return res;
+  } catch (err) {
+    throw err.response;
+  }
+};
+
 
 
 
@@ -47,5 +57,6 @@ export default {
   signIn,
   deleteDocumentFolder,
   newDocuments,
-  getDocuments
+  getDocuments,
+  postPintrest
 }
