@@ -1,5 +1,7 @@
 const config = {
-    loginRoute: '/user/signin',
-  };
-  
-  export default config;
+  loginRoute: '/user/signin',
+  getDocuments: '/document',
+  newDocument: '/document'
+};
+
+export default config;
