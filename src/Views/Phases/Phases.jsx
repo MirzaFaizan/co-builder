@@ -91,19 +91,25 @@ export default function Phases() {
                   </div>
                 ) : (
                   <>
-                    {data.map(value => (
+                    {data === "No phase Exist in the db" ? (
+                      <h2 className="">no data found</h2>
+                    ) : (
                       <>
-                        <ProgressCard
-                          key={value._id}
-                          value={value}
-                          color={value.color}
-                          title={value.name}
-                          // heading={value.heading}
-                          description={value.description}
-                          showCardDetails={showCardDetails}
-                        />
+                        {data.map(value => (
+                          <>
+                            <ProgressCard
+                              key={value._id}
+                              value={value}
+                              color={value.color}
+                              title={value.name}
+                              // heading={value.heading}
+                              description={value.description}
+                              showCardDetails={showCardDetails}
+                            />
+                          </>
+                        ))}
                       </>
-                    ))}
+                    )}
                   </>
                 )}
               </div>
