@@ -47,6 +47,11 @@ const SideBarData = [
     routeName: "timeline"
   },
   {
+    IconName: "far fa-clock",
+    Name: "Phases",
+    routeName: "phases"
+  },
+  {
     IconName: "far fa-images",
     Name: "Progress Photos",
     routeName: "progress-photos"
@@ -55,6 +60,11 @@ const SideBarData = [
     IconName: "far fa-calendar-alt",
     Name: "Upcomming Meetings",
     routeName: "upcomming-meetings"
+  },
+  {
+    IconName: "far fa-clock",
+    Name: "Phases",
+    routeName: "phases"
   }
 ];
 export default function SideBar() {
