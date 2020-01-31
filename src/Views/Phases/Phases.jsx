@@ -63,7 +63,7 @@ export default function Phases() {
               </h3>
             </div>
             {showDetails ? (
-              <div className="col-sm-12 pt-3 overflow-auto d-flex flex-wrap">
+              <div className="col-sm-12 pt-3 d-flex flex-wrap">
                 {loading ? (
                   <SimpleCardLoader />
                 ) : (
