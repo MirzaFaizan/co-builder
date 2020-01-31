@@ -15,52 +15,53 @@ import Timeline from './Views/Timeline/Timeline';
 import ProgressPhotos from './Views/ProgressPhotos/ProgressPhotos';
 import UpComingMeetings from './Views/UpcomingMeetings/UpcomingMeetings';
 import Suppliers from './Views/Suppliers/Suppliers';
-
+import Phases from './Views/Phases/Phases';
 const customHistory = createBrowserHistory();
 
 const type = localStorage.getItem('token'); //update when user logs in;
 
 function CustomRoutes(props) {
-  const routes =()=>{
-    return(
+  const routes = () => {
+    return (
       <>
-      <Route exact path="/dashboard" component={Dashboard} />   
-  <Route exact path="/checklist" component={Checklist} />
-  <Route exact path="/budgeter" component={Budgeter} />
-  <Route exact path="/qoutes" component={Qoutes} />
-  <Route exact path="/sub-contractors" component={SubContractors} />
-  <Route exact path="/pinterest-board" component={PintrestBoard} />
-  <Route exact path="/documents" component={Documents} />
-  <Route exact path="/timeline" component={Timeline} />
-  <Route exact path="/progress-photos" component={ProgressPhotos} />
-  <Route exact path="/upcomming-meetings" component={UpComingMeetings} />
-  <Route exact path="/suppliers" component={Suppliers} />
+        <Route exact path="/dashboard" component={Dashboard} />
+        <Route exact path="/checklist" component={Checklist} />
+        <Route exact path="/budgeter" component={Budgeter} />
+        <Route exact path="/qoutes" component={Qoutes} />
+        <Route exact path="/sub-contractors" component={SubContractors} />
+        <Route exact path="/pinterest-board" component={PintrestBoard} />
+        <Route exact path="/documents" component={Documents} />
+        <Route exact path="/timeline" component={Timeline} />
+        <Route exact path="/progress-photos" component={ProgressPhotos} />
+        <Route exact path="/upcomming-meetings" component={UpComingMeetings} />
+        <Route exact path="/suppliers" component={Suppliers} />
+        <Route exact path="/phases" component={Phases} />
 
-  </>
+      </>
     )
   }
-  
-  const routestoRender =()=> {
+
+  const routestoRender = () => {
     if (type) {
       return (
         <>
-          <body>   
-        <header>
-            <Navbar />
-        </header>
-        <div class="row position-relative custom-bg-gray89">
-        <SideBar routes={props} />
-        <main class="col ml-2 mt-2 mb-3 mr-0 p-0 rounded-lg">
-          {routes()}
-          </main>
-        
-        </div>
-          
-        </body>      
-          </>
+          <body>
+            <header>
+              <Navbar />
+            </header>
+            <div class="row position-relative custom-bg-gray89">
+              <SideBar routes={props} />
+              <main class="col ml-2 mt-2 mb-3 mr-0 p-0 rounded-lg">
+                {routes()}
+              </main>
+
+            </div>
+
+          </body>
+        </>
       );
     } else {
-       return <Redirect to="/" />;
+      return <Redirect to="/" />;
     }
   }
 

@@ -45,6 +45,26 @@ const postPintrest = async (id, body) => {
     throw err.response;
   }
 };
+const getPhases = async (id) => {
+  try {
+    const res = await axios.get(`${apiConfig.getPhases}/${id}`);
+
+    return res;
+  } catch (err) {
+    throw err.response;
+  }
+
+};
+const getPhaseItem = async (id) => {
+  try {
+    const res = await axios.get(`${apiConfig.getPhaseItem}/${id}`);
+
+    return res;
+  } catch (err) {
+    throw err.response;
+  }
+
+};
 
 
 
@@ -58,5 +78,7 @@ export default {
   deleteDocumentFolder,
   newDocuments,
   getDocuments,
-  postPintrest
+  postPintrest,
+  getPhases,
+  getPhaseItem
 }
