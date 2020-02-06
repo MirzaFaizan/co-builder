@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Router, Route, Redirect } from "react-router-dom";
 import createBrowserHistory from "history/createBrowserHistory";
 import Login from './Views/Auth/SignIn/SignIn';
@@ -16,11 +16,15 @@ import ProgressPhotos from './Views/ProgressPhotos/ProgressPhotos';
 import UpComingMeetings from './Views/UpcomingMeetings/UpcomingMeetings';
 import Suppliers from './Views/Suppliers/Suppliers';
 import Phases from './Views/Phases/Phases';
+import Drift from 'react-driftjs';
+import { InfoContext } from "./Context/AuthContext";
+
 const customHistory = createBrowserHistory();
 
 const type = localStorage.getItem('token'); //update when user logs in;
 
 function CustomRoutes(props) {
+  const { info } = useContext(InfoContext);
   const routes = () => {
     return (
       <>
@@ -45,7 +49,11 @@ function CustomRoutes(props) {
     if (type) {
       return (
         <>
-          <body>
+          <div>
+            <Drift appId="75ahy8i3pd39"
+              userId={info.userId}
+              attributes={{ email: info.userEmail }}
+            />
             <header>
               <Navbar />
             </header>
@@ -57,7 +65,7 @@ function CustomRoutes(props) {
 
             </div>
 
-          </body>
+          </div>
         </>
       );
     } else {
