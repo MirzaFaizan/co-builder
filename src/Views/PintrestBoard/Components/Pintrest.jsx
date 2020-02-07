@@ -1,13 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import ImagesLayout from "./ImagesLayout";
 import { InfoContext } from "../../../Context/AuthContext";
 import Api from "../../../ApiCalls/api";
 export default function PintrestView() {
-  const { info, setInfo } = React.useContext(InfoContext);
-  const [status, setStatus] = useState(false);
+  const { info, setInfo } = useContext(InfoContext);
   const [loading, setLoading] = useState(false);
   const [pinterestUserName, setPinterestUserName] = useState("");
   const [pinterestBoardName, setPinterestBoardName] = useState("");
+  const [data, setData] = useState([]);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    if (info.pinterestFirstTime) {
+      getData();
+    }
+  }, [info.pinterestFirstTime]);
+  const getData = () => {
+    fetch(
+      `https://api.pinterest.com/v1/boards/irtazailogics/houses/pins/?access_token=ApJkLvaPSyBi1kMUnc1WNb7G-Y9-FeNSlXCROZtGaJZbK4CslQR6ADAAAjNkRmiX3axApRMAAAAA&fields=id%2Cnote%2Cimage`
+    )
+      .then(response => response.json())
+      .then(data => {
+        setData(data);
+      })
+      .catch(err => {
+        setError(true);
+        console.log(err);
+      });
+  };
 
   const pintrestGo = () => {
     setLoading(true);
@@ -19,7 +39,11 @@ export default function PintrestView() {
       .then(res => {
         setLoading(false);
         console.log(res);
-        setInfo({ pinterestFirstTime: true });
+        setInfo({
+          pinterestFirstTime: true,
+          pinterestUserName: pinterestUserName,
+          pinterestBoardName
+        });
       })
       .catch(err => {
         setLoading(false);
@@ -62,57 +86,10 @@ export default function PintrestView() {
                 </div>
               </div>
             </div>
-
-            {/* <!-- Icons --> */}
-            {/* <!-- <div class="d-flex flex-column flex-sm-row align-items-center  justify-content-center justify-content-md-start">
-                       
-                 <div class="d-flex align-items-center">
-                     <button class="btn btn-outline-default border-0 custom-btn">
-                         <i class="fas fa-user-friends fa-2x"></i>
-                     </button>
-                     
-                     <button class="btn btn-round border-0 p-0 pinterrest-boards-section__icon-circle mr-4 custom-btn-bg">
-                         <span class="h5 font-weight-bold my-0">A</span>
-                     </button>
-                 </div>
-         
-                 <span class="pinterest-boards-section__height border"></span>
-         
-                 <div class="d-flex">
-                     <button class="btn btn-outline-default border-0 custom-btn">
-                         <i class="fas fa-comment-dots fa-2x"></i>
-                     </button>
-                     
-                     <button class="btn btn-outline-default border-0 custom-btn">
-                         <i class="position-relative fas fa-bell fa-2x" aria-hidden="true">
-                             <span class="header-notification-box pinterest-boards-notification-box badge-danger fixed-top position-absolute rounded-circle text-center">10</span>
-                         </i>
-                     </button>
-         
-                     <button type="button" class="btn btn-link custom-btn">
-                         <i class="fas fa-ellipsis-h fa-2x"></i>
-                       </button>   
-         
-                 </div>
-         
-             </div> --> */}
           </div>
-          {/*          
-              <div class="pinterest-boards-section-buttons">
-                 <button class="btn btn-primary custom-color-tobacco-brown-bg text-capitalize font-weight-bold">Floor plans</button>
-                 <button class="btn btn-primary custom-color-woodland-bg text-capitalize font-weight-bold">treehouse</button>
-                 <button class="btn btn-primary  text-capitalize font-weight-bold">achitecture</button>
-                 <button class="btn btn-primary  text-capitalize font-weight-bold">british columbia</button>
-                 <button class="btn btn-primary  text-capitalize font-weight-bold">how to build</button>
-                 <button class="btn btn-primary  text-capitalize font-weight-bold">ideas</button>
-         
-                 <button class="btn btn-outline-default border-0 p-0 m-0 custom-btn pinterest-boards-section-buttons__pos-fixed">
-                     <i class="fas fa-chevron-right fa-2x"></i>
-                 </button>
-         
-              </div> */}
+
           <div className="col-sm-12 py-2">
-            <ImagesLayout />
+            <ImagesLayout data={data} error={error} />
           </div>
         </>
       ) : (
