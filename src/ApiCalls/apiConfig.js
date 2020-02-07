@@ -4,7 +4,9 @@ const config = {
   newDocument: '/document',
   pinterest: '/user/pinterest',
   getPhases: '/phase',
-  getPhaseItem: '/items'
+  getPhaseItem: '/items',
+  getBudgeter: '/budgeter'
 };
+
 
 export default config;

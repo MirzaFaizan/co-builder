@@ -4,34 +4,29 @@
     width: 100%;
     margin: 0 auto;
     padding: 5px;
-
     /* Styles */
     background: #fff;
     border-radius: 7px;
-    border: 1px solid rgba(0,0,0,0.15);
-    box-shadow: 0 1px 1px rgba(50,50,50,0.1);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 1px rgba(50, 50, 50, 0.1);
     cursor: pointer;
     outline: none;
-
     /* Font settings */
     font-weight: bold;
     /* color: #8AA8BD; */
 }
 
-
-
 .wrapper-dropdown-3 .dropdown {
-  /* Size & position */
+    /* Size & position */
     position: absolute;
     top: 140%;
     left: 0;
     right: 0;
-
     /* Styles */
     background: white;
     border-radius: inherit;
-    border: 1px solid rgba(0,0,0,0.17);
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    border: 1px solid rgba(0, 0, 0, 0.17);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     font-weight: normal;
     -webkit-transition: all 0.5s ease-in;
     -moz-transition: all 0.5s ease-in;
@@ -39,7 +34,6 @@
     -o-transition: all 0.5s ease-in;
     transition: all 0.5s ease-in;
     list-style: none;
-
     /* Hiding */
     opacity: 0;
     pointer-events: none;
@@ -54,7 +48,7 @@
     right: 15px;
     border-width: 0 6px 6px 6px;
     border-style: solid;
-    border-color: #fff transparent;    
+    border-color: #fff transparent;
 }
 
 .wrapper-dropdown-3 .dropdown:before {
@@ -66,15 +60,15 @@
     right: 13px;
     border-width: 0 8px 8px 8px;
     border-style: solid;
-    border-color: rgba(0,0,0,0.1) transparent;    
+    border-color: rgba(0, 0, 0, 0.1) transparent;
 }
 
-.wrapper-dropdown-3 .dropdown li a {
+.wrapper-dropdown-3 .dropdown li span {
     display: block;
     padding: 10px;
     text-decoration: none;
     border-bottom: 1px solid #e6e8ea;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,1);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 1);
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
     -ms-transition: all 0.3s ease-out;
@@ -112,14 +106,14 @@
 
 /* No CSS3 support */
 
-.no-opacity       .wrapper-dropdown-3 .dropdown,
-.no-pointerevents .wrapper-dropdown-3 .dropdown {
+.no-opacity .wrapper-dropdown-3 .dropdown, .no-pointerevents .wrapper-dropdown-3 .dropdown {
     display: none;
-    opacity: 1; /* If opacity support but no pointer-events support */
-    pointer-events: auto; /* If pointer-events support but no pointer-events support */
+    opacity: 1;
+    /* If opacity support but no pointer-events support */
+    pointer-events: auto;
+    /* If pointer-events support but no pointer-events support */
 }
 
-.no-opacity       .wrapper-dropdown-3.active .dropdown,
-.no-pointerevents .wrapper-dropdown-3.active .dropdown {
+.no-opacity .wrapper-dropdown-3.active .dropdown, .no-pointerevents .wrapper-dropdown-3.active .dropdown {
     display: block;
 }

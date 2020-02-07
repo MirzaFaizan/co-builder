@@ -4,7 +4,7 @@ import CardLinesIndecator from "./CardLines";
 export default function CardView(props) {
   return (
     <div
-      className="cursor-pointer col-sm-3 p-0"
+      className="cursor-pointer p-0"
       onClick={() => props.showCardDetails(props.value)}
     >
       <Card

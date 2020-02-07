@@ -65,6 +65,14 @@ const getPhaseItem = async (id) => {
   }
 
 };
+const getBudgeter = async () => {
+  try {
+    const res = await axios.get(`${apiConfig.getBudgeter}`);
+    return res;
+  } catch (err) {
+    throw err.response;
+  }
+};
 
 
 
@@ -80,5 +88,6 @@ export default {
   getDocuments,
   postPintrest,
   getPhases,
-  getPhaseItem
+  getPhaseItem,
+  getBudgeter
 }
